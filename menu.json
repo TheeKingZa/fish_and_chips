@@ -1,0 +1,85 @@
+{
+    "menu": [
+      {
+        "id": 1,
+        "name": "Bunny Chow - Beef",
+        "description": "Half loaf filled with spicy beef curry.",
+        "price": 55.00,
+        "category": "Bunny Chows",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 2,
+        "name": "Bunny Chow - Chicken",
+        "description": "Traditional Durban chicken bunny chow.",
+        "price": 50.00,
+        "category": "Bunny Chows",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 3,
+        "name": "Classic Fish & Chips",
+        "description": "Crispy hake with golden chips.",
+        "price": 45.00,
+        "category": "Fish Meals",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 4,
+        "name": "Grilled Snoek & Pap",
+        "description": "Grilled snoek served with pap and chakalaka.",
+        "price": 70.00,
+        "category": "Fish Meals",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 5,
+        "name": "Russian & Chips",
+        "description": "Juicy Russian sausage served with crispy chips.",
+        "price": 30.00,
+        "category": "Quick Bites",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 6,
+        "name": "Vienna & Chips",
+        "description": "2 Vienna sausages served with chips.",
+        "price": 25.00,
+        "category": "Quick Bites",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 7,
+        "name": "Coca-Cola (330ml)",
+        "description": "Ice cold fizzy Coca-Cola.",
+        "price": 15.00,
+        "category": "Refreshments",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 8,
+        "name": "Fanta Orange (330ml)",
+        "description": "Sweet and tangy orange fizz.",
+        "price": 15.00,
+        "category": "Refreshments",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 9,
+        "name": "Still Water (500ml)",
+        "description": "Purified bottled water.",
+        "price": 10.00,
+        "category": "Refreshments",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 10,
+        "name": "Pap & Chakalaka",
+        "description": "Local maize dish served with spicy chakalaka.",
+        "price": 20.00,
+        "category": "Sides",
+        "image": "./images/logo.png"
+      }
+    ]
+  }
+  

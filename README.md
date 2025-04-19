@@ -42,6 +42,6 @@ fish-and-chips-shop/
 
 ---
 
-[FiSH & Chips Application]()
+[FiSH & Chips Application](https://theekingza.github.io/fish_and_chips)
 
 ---
