@@ -37,7 +37,7 @@
   
   .image-logo {
     width: 100%;
-    height: 100px;
+    height: 250px;
     background-image: url('./images/logo.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -169,6 +169,58 @@ nav {
     gap: 1.5rem;
     flex-wrap: wrap;
   }
+
+  .minipay-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .minipay-links a:hover {
+    background-color: var(--primary-color);
+  }
+
+  .minipay-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('./images/minipay/MiniPay_Primary Color.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+.img-qr {
+    width: 70px;
+    height: 70px;
+}
+
+.order-list {
+    align-items: center;
+}
+.order-list li {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--secondary-color);
+
+}
+  
+  .order-list > li:last-child {
+    border-bottom: none;
+  }
+  
+  .order-list h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+  
+  .order-list p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+
+
   
 /* Map Section */  
 .section-map {
