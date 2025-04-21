@@ -1,44 +1,67 @@
-#!/usr/bin/env bash
-# This script is used to deploy the application to a remote server on GitHub.
-# It commits changes, pushes them to the master branch, merges them into the gh-pages branch, and pushes the gh-pages branch.
+#!/usr/bin/bash
 
-set -e  # (Stops execution if any command fails)
-set -u  # (Treats unset variables as errors)
+# Color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
 
-# Check if the commit message is provided
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <commit_message>"
-    exit 1
+# Git deployment script for SN Fish and Chips
+deploy_to_github() {
+    # Ensure the user is on the master branch before deploying
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+    if [ "$current_branch" != "master" ]; then
+        echo -e "${YELLOW}Switching to master bracnh...${NC}"
+        git checkout master 2>/dev/null || git checkout -b master
+    fi
+
+    # Add all changes
+    git add .
+
+    # prompt for a commit
+    read -p "Enter commit message: " commit_message
+
+    # Commit Changes
+    git commit -m "$commit_message"
+
+    # Push to master GitHub
+    git push origin master
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to push to Github.${NC}"
+        exit 1
+    fi
+
+    echo -e "${GREEN}Changes pushed to GitHub successfully!${NC}"
+
+    # Check if gh-pages branch exists
+    if git show-ref --quiet refs/heads/gh-pages; then
+        echo -e "${GREEN}gh-pages branch exists. Updating...${NC}"
+        git checkout gh-pages
+        git merge master --no-edit
+    else
+        echo -e "${YELLOW}gh-pages branch does not exist. Creating...${NC}"
+        git checkout -b gh-pages
+        git merge master --no-edit
+    fi
+
+    # Push to gh-pages branch
+    git push origin gh-pages
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to push to gh-pages.${NC}"
+        exit 1
+    fi
+    echo -e "${GREEN}Changes pushed to gh-pages successfully!${NC}"
+    # Switch back to master branch
+    git checkout master
+}
+
+
+#  Run deployment function
+deploy_to_github
+# Check if the deployment was successful
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Deployment to GitHub was successful!${NC}"
+else
+    echo -e "${RED}Deployment to GitHub failed!${NC}"
 fi
-
-commit_message="$1"
-
-# Ensure the current branch is master
-current_branch=$(git branch --show-current)
-if [ "$current_branch" != "master" ]; then
-    echo "Error: You must be on the 'master' branch to deploy."
-    exit 1
-fi
-
-# Stage all changes
-git add .
-
-# Try to commit changes (if any)
-git commit -m "$commit_message" || echo "No changes to commit."
-
-# Push to master
-git push origin master
-
-# Switch to gh-pages
-git checkout gh-pages
-
-# Merge latest master into gh-pages
-git merge master --no-edit
-
-# Push gh-pages to GitHub
-git push origin gh-pages
-
-# Switch back to master
-git checkout master
-
-echo "✅ Deployment completed successfully."
