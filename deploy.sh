@@ -59,9 +59,3 @@ deploy_to_github() {
 
 #  Run deployment function
 deploy_to_github
-# Check if the deployment was successful
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Deployment to GitHub was successful!${NC}"
-else
-    echo -e "${RED}Deployment to GitHub failed!${NC}"
-fi
