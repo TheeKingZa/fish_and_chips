@@ -1,47 +1,61 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-# Colors
+# Color codes
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-NC='\033[0m' # No color
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
 
-# Make sure you're on master and it's up to date
-git checkout master
-git pull origin master
+# Git deployment script for SN Fish and Chips
+deploy_to_github() {
+    # Ensure the user is on the master branch before deploying
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-# Delete the local gh-pages if it exists
-if git rev-parse --verify gh-pages >/dev/null 2>&1; then
-    echo -e "${GREEN}✅ Deleting existing 'gh-pages' branch...${NC}"
-    git branch -D gh-pages
-fi
+    if [ "$current_branch" != "master" ]; then
+        echo -e "${YELLOW}Switching to master bracnh...${NC}"
+        git checkout master 2>/dev/null || git checkout -b master
+    fi
 
-# Create a fresh copy of master called gh-pages
-git checkout -b gh-pages
+    # Add all changes
+    git add .
 
-# Optional: Remove things you don't want on the live site (e.g., README, scripts, dev configs)
-# rm deploy.sh README.md
+    # prompt for a commit
+    read -p "Enter commit message: " commit_message
 
-# Ask for a commit message
-echo -e "${GREEN}Enter a commit message:${NC}"
-read -r commit_message
+    # Commit Changes
+    git commit -m "$commit_message"
 
-# Use default if empty
-if [ -z "$commit_message" ]; then
-    commit_message="Deploying fresh copy of master to gh-pages"
-fi
+    # Push to master GitHub
+    git push origin master
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to push to Github.${NC}"
+        exit 1
+    fi
 
-# Add all changes and commit
-git add .
-git commit -m "$commit_message"
+    echo -e "${GREEN}Changes pushed to GitHub successfully!${NC}"
 
-# Push to gh-pages (force to overwrite)
-git push --force origin gh-pages
+    # Check if gh-pages branch exists
+    if git show-ref --quiet refs/heads/gh-pages; then
+        echo -e "${GREEN}gh-pages branch exists. Updating...${NC}"
+        git checkout gh-pages
+        git merge master --no-edit
+    else
+        echo -e "${YELLOW}gh-pages branch does not exist. Creating...${NC}"
+        git checkout -b gh-pages
+        git merge master --no-edit
+    fi
 
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✅ Successfully deployed 'gh-pages' from 'master'.${NC}"
-else
-    echo -e "${RED}❌ Failed to push to 'gh-pages'.${NC}"
-fi
+    # Push to gh-pages branch
+    git push origin gh-pages
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Failed to push to gh-pages.${NC}"
+        exit 1
+    fi
+    echo -e "${GREEN}Changes pushed to gh-pages successfully!${NC}"
+    # Switch back to master branch
+    git checkout master
+}
 
-# Switch back to master
-git checkout master
+
+#  Run deployment function
+deploy_to_github
