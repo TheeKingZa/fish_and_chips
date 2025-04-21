@@ -71,6 +71,24 @@ nav {
         color: #fff;
     }
 
+    /* heading3 */
+    .heading3{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
  /* Main */
   main {
     max-width: 1200px;
@@ -144,6 +162,18 @@ nav {
     color: var(--primary-color);
   }
 /* Minipay */
+
+.minipay-images {
+  border: 3px solid var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+
+
 .minipay-info {
     text-align: center;
     padding: 2rem;
@@ -193,6 +223,16 @@ nav {
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  .minipay-ScanToPay {
+    width: 100px;
+    height: 100px;
+    background-image: url('./images/minipay/MiniPay_App\ Icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
 .img-qr {
     width: 70px;
     height: 70px;
@@ -307,4 +347,27 @@ nav {
         padding: 1rem 0;
         background-color: var(--secondary-color);
         color: var(--text-color);
+    }
+
+    /* Fixed Button to go up */
+    .upButton {
+      z-index: 1000;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .upButton:hover {
+        background-color: var(--secondary-color);
+        box-shadow: 0 10px 10px var(--primary-color);
     }
