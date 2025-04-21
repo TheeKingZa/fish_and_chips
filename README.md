@@ -40,7 +40,6 @@ fish-and-chips-shop/
 * Integrate animations for transitions.
 * Add backend support for real data (e.g., Firebase).
 
-
 ---
 
 [FiSH & Chips Application](https://theekingza.github.io/fish_and_chips)

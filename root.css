@@ -199,8 +199,9 @@ nav {
 
 .order-list {
     align-items: center;
-}
-.order-list li {
+  }
+  .order-list li {
+    padding: 2rem 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--secondary-color);
 

@@ -2,82 +2,271 @@
     "menu": [
       {
         "id": 1,
-        "name": "Bunny Chow - Beef",
-        "description": "Half loaf filled with spicy beef curry.",
-        "price": 55.00,
-        "category": "Bunny Chows",
+        "name": "ONE",
+        "description": "Chips, Polony, Cheese and Achaar.",
+        "price": 20.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 2,
-        "name": "Bunny Chow - Chicken",
-        "description": "Traditional Durban chicken bunny chow.",
-        "price": 50.00,
-        "category": "Bunny Chows",
+        "name": "TWO",
+        "description": "Chips, Polony, Cheese, Egg and Achaar.",
+        "price": 22.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 3,
-        "name": "Classic Fish & Chips",
-        "description": "Crispy hake with golden chips.",
-        "price": 45.00,
-        "category": "Fish Meals",
+        "name": "THREE",
+        "description": "Chips, Polony, Cheese, Russian and Achaar.",
+        "price": 27.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 4,
-        "name": "Grilled Snoek & Pap",
-        "description": "Grilled snoek served with pap and chakalaka.",
-        "price": 70.00,
-        "category": "Fish Meals",
+        "name": "FOUR",
+        "description": "Chips, Polony, Cheese, Burger and Achaar.",
+        "price": 27.00,
+        "category": "Kota",
         "image": "./images/logo.png"
-      },
-      {
+      },{
         "id": 5,
-        "name": "Russian & Chips",
-        "description": "Juicy Russian sausage served with crispy chips.",
-        "price": 30.00,
-        "category": "Quick Bites",
+        "name": "FIVE",
+        "description": "Chips, Polony, Cheese, Vienna and Achaar.",
+        "price": 27.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 6,
-        "name": "Vienna & Chips",
-        "description": "2 Vienna sausages served with chips.",
-        "price": 25.00,
-        "category": "Quick Bites",
+        "name": "SIX",
+        "description": "Chips, Polony, Cheese, Russian, Egg, Lettuce and Achaar.",
+        "price": 30.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 7,
-        "name": "Coca-Cola (330ml)",
-        "description": "Ice cold fizzy Coca-Cola.",
-        "price": 15.00,
-        "category": "Refreshments",
+        "name": "SEVEN",
+        "description": "Chips, Polony, Cheese, Russian, Egg, Lettuce, Bacon and Achaar.",
+        "price": 35.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 8,
-        "name": "Fanta Orange (330ml)",
-        "description": "Sweet and tangy orange fizz.",
-        "price": 15.00,
-        "category": "Refreshments",
+        "name": "EIGHT",
+        "description": "Chips, Polony, Cheese, Russian, Vienna, Burger, Egg, Lettuce and Achaar.",
+        "price": 48.00,
+        "category": "Kota",
         "image": "./images/logo.png"
       },
       {
         "id": 9,
-        "name": "Still Water (500ml)",
-        "description": "Purified bottled water.",
+        "name": "Fish",
+        "description": "Small",
+        "price": 25.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 10,
+        "name": "Fish",
+        "description": "Medium",
+        "price": 35.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 11,
+        "name": "Fish",
+        "description": "Large",
+        "price": 45.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 12,
+        "name": "Fish & Chips",
+        "description": "Crispy fish fillet served with chips.",
+        "price": 50.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 13,
+        "name": "Omelette",
+        "description": "Bacon Omelette",
+        "price": 35.00,
+        "category": "Omelette",
+        "image": "./images/logo.png"
+      },{
+        "id": 14,
+        "name": "Omelette",
+        "description": "Cheese Vienna Omelette",
+        "price": 35.00,
+        "category": "Omelette",
+        "image": "./images/logo.png"
+      },{
+        "id": 15,
+        "name": "Chips S",
+        "description": "Small",
+        "price": 20.00,
+        "category": "Packet Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 16,
+        "name": "Chips M",
+        "description": "Medium",
+        "price": 30.00,
+        "category": "Packet Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 17,
+        "name": "Chips L",
+        "description": "Large",
+        "price": 45.00,
+        "category": "Packet Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 18,
+        "name": "Fish & Chips SM",
+        "description": "Small Hake Fish, Small Chips & Green Salad.",
+        "price": 45.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 19,
+        "name": "Fish & Chips M",
+        "description": "Medium Hake Fish, Medium Chips & Green Salad.",
+        "price": 52.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 20,
+        "name": "Fish & Chips L",
+        "description": "Large Hake Fish, Large Chips & Green Salad.",
+        "price": 65.00,
+        "category": "Fish & Chips",
+        "image": "./images/logo.png"
+      },{
+        "id": 21,
+        "name": "Combo 1",
+        "description": "Small Chips, Russian & 300ml Drink",
+        "price": 35.00,
+        "category": "Russian & Chips Combos",
+        "image": "./images/logo.png"
+      },{
+        "id": 22,
+        "name": "Combo 2",
+        "description": "Small Chips, medium Vienna & 300ml Drink",
+        "price": 45.00,
+        "category": "Russian & Chips Combos",
+        "image": "./images/logo.png"
+      },{
+        "id": 23,
+        "name": "Combo 3",
+        "description": "Small Chips, Russian, Fish & 300ml Drink",
+        "price": 40.00,
+        "category": "Russian & Chips Combos",
+        "image": "./images/logo.png"
+      },{
+        "id": 24,
+        "name": "Russian",
+        "description": "Medium Russian",
+        "price": 15.00,
+        "category": "Russian",
+        "image": "./images/logo.png"
+      },{
+        "id": 25,
+        "name": "Russian",
+        "description": "Large Russian",
+        "price": 20.00,
+        "category": "Russian",
+        "image": "./images/logo.png"
+      },{
+        "id": 26,
+        "name": "Russian",
+        "description": "Medium Cheese Russian",
+        "price": 17.00,
+        "category": "Russian",
+        "image": "./images/logo.png"
+      },{
+        "id": 27,
+        "name": "Russian",
+        "description": "Large Cheese Russian",
+        "price": 20.00,
+        "category": "Russian",
+        "image": "./images/logo.png"
+      },{
+        "id": 28,
+        "name": "Russian Roll",
+        "description": "Russian Roll",
+        "price": 20.00,
+        "category": "Russian Rolls",
+        "image": "./images/logo.png"
+      },{
+        "id": 29,
+        "name": "Russian Roll",
+        "description": "Cheese Russian Roll",
+        "price": 22.00,
+        "category": "Russian Rolls",
+        "image": "./images/logo.png"
+      },{
+        "id": 30,
+        "name": "Hot Dog",
+        "description": "Hot Dog",
+        "price": 15.00,
+        "category": "Hot Dog",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 31,
+        "name": "Skhambane/Chicken Patty",
+        "description": "Chips, Polony Cheese, Chiken Patty, Egg & Achaar.",
+        "price": 37.00,
+        "category": "Specials",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 32,
+        "name": "Todays Special",
+        "description": "Small Chips and 2 nuggets.",
+        "price": 30.00,
+        "category": "Specials",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 33,
+        "name": "Todays Special",
+        "description": "Medium Chips and 4 nuggets.",
+        "price": 50.00,
+        "category": "Specials",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 34,
+        "name": "Coca-Cola (330ml)",
+        "description": "Cold Drink",
         "price": 10.00,
         "category": "Refreshments",
         "image": "./images/logo.png"
       },
       {
-        "id": 10,
-        "name": "Pap & Chakalaka",
-        "description": "Local maize dish served with spicy chakalaka.",
-        "price": 20.00,
-        "category": "Sides",
+        "id": 35,
+        "name": "Coca-Cola (1.25L)",
+        "description": "1.25L(Bring your own bottle or Pay Deposit.)",
+        "price": 13.00,
+        "category": "Refreshments",
+        "image": "./images/logo.png"
+      },
+      {
+        "id": 36,
+        "name": "Still Water (500ml)",
+        "description": "Purified bottled water.",
+        "price": 10.00,
+        "category": "Refreshments",
         "image": "./images/logo.png"
       }
     ]
